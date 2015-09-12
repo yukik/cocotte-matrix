@@ -16,10 +16,10 @@ cocotte-matrix
 
 ```javascript
 var data = [
-	['名前', '年齢', '出身']
-  , '-'
-  , ['tomas', '32', 'USA']
-  , ['山下', '不明', '北海道', '釣り']
+  ['名前', '年齢', '出身'],
+  '-',
+  ['tomas', '32', 'USA'],
+  ['山下', '不明', '北海道', '釣り']
 ];
 ```
 
@@ -32,7 +32,7 @@ matrix(data);
 
 次のようにコンソールに出力されます
 配列以外の行は架線が出力されます
-改行を含む行は正しく出力されません
+改行を含む行は一行目のみ出力されます
 
 ```
 + ----- + ---- + ------ + ---- +
@@ -46,7 +46,7 @@ matrix(data);
 # HTMLのTABLEを作成
 
 ```javascript
-var result = matrix(data, 'html');
+var result = matrix.toHtml(data);
 ```
 
 resultには次の文字列が設定されます
@@ -55,31 +55,31 @@ resultには次の文字列が設定されます
 
 ```html
 <table class="cocotteMatrix">
-	<tr>
-		<th>名前</th>
-		<th>年齢</th>
-		<th>出身</th>
-		<th></th>
-	</tr>
-	<tr>
-		<td>tomas</td>
-		<td>32</td>
-		<td>USA</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>山下</td>
-		<td>不明</td>
-		<td>北海道</td>
-		<td>釣り</td>
-	</tr>
+  <tr>
+    <th>名前</th>
+    <th>年齢</th>
+    <th>出身</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>tomas</td>
+    <td>32</td>
+    <td>USA</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>山下</td>
+    <td>不明</td>
+    <td>北海道</td>
+    <td>釣り</td>
+  </tr>
 </table>
 ```
 
 # CSVを作成
 
 ```javascript
-var result = matrix(data, 'csv');
+var result = matrix.toCsv(data);
 ```
 
 resultには次の文字列が設定されます
