@@ -1,10 +1,11 @@
 {
   "name": "cocotte-matrix",
+  "keywords": ["cocotte", "tools"],
   "author": "Yuki Kurata <yuki.kurata@gmail.com>",
-  "dependencies": {},
-  "main": "matrix.js",
-  "version": "0.1.0",
+  "main": "lib/matrix.js",
+  "version": "0.2.0",
   "description": "配列を表形式に加工する",
+  "dependencies": {},
   "directories": {
     "example": "example",
     "test": "test"
@@ -16,9 +17,6 @@
     "type": "git",
     "url": "git://github.com/yukik/cocotte-matrix.git"
   },
-  "keywords": [
-    "tools"
-  ],
   "readmeFilename": "README.md",
   "license": "MIT"
 }
