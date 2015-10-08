@@ -1,4 +1,6 @@
-var matrix = require('..');
+/*global Cocotte*/
+var isClient = typeof window === 'object';
+var matrix = isClient ? Cocotte.matrix : require('..');
 
 var data = [
   ['名前', '年齢', '出身'],
